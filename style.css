@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background-image: url(bg.jpg);
+  background-size: cover;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  position: absolute;
+  max-width: 600px;
+  max-height: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 35px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: solid 1px white;
+}
+h1 {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.left-side {
+  width: 70%;
+  box-sizing: border-box;
+}
+.right-side {
+  width: 30%;
+  padding: 20px 0 0 20px;
+}
+.left-side textarea {
+  border-radius: 10px;
+  padding: 10px;
+  border: solid 1px white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#deadline {
+  border: solid 1px white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+label {
+  font-weight: bold;
+}
+input[type='datetime-local'],
+button[type='button'] {
+  padding: 10px;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 5px;
+  width: 100%;
+}
+#add-btn {
+  width: 100%;
+  height: 60px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: rgb(113, 139, 195);
+  transition: 0.3s;
+}
+#add-btn:hover {
+  background-color: rgb(93, 116, 165);
+}
+.delete-btn {
+  width: 100px;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 22.5px;
+  background-color: rgb(109, 76, 123);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.delete-btn:hover {
+  background-color: rgb(80, 53, 92);
+}
+.sort-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.sort-container button {
+  padding: 15px;
+  background-color: rgb(113, 139, 195);
+  color: white;
+  border: 1px solid white;
+  border-radius: 22.5px;
+  font-weight: bold;
+}
+.sort-container button:hover {
+  background-color: rgb(93, 116, 165);
+}
+.selectedSort {
+  background-color: rgb(109, 76, 123) !important;
+}
+.selectedSort:hover {
+  background-color: rgb(80, 53, 92) !important;
+}
+.list-container {
+  max-height: 400px;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border: 1px solid white;
+  background: rgb(113, 139, 195);
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  overflow: auto;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: 0.3s;
+  font: bold;
+}
+li:hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+.completed {
+  opacity: 0.5;
+}
+.completed .information-container .description {
+  text-decoration: line-through;
+}
+.information-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.information-container span {
+  display: block;
+  word-wrap: break-word;
+}
+.deadline {
+  font-weight: bold;
+}
+.complete-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.complete-label span {
+  padding: 5px;
+}
+.complete-checkbox {
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  background-color: transparent;
+}
+.delete-btn,
+.complete-checkbox {
+  cursor: pointer;
+  transition: color 0.3s;
+}
